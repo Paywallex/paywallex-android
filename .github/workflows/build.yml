@@ -1,0 +1,14 @@
+# Construit et publie localement le kit Android à chaque envoi (comme JitPack). Signé : Superagent.
+name: build
+on: [push, pull_request]
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 17 }
+      - uses: gradle/actions/setup-gradle@v4
+        with: { gradle-version: "8.9" }
+      - name: Construire la bibliothèque
+        run: gradle assembleRelease publishToMavenLocal
