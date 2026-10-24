@@ -15,7 +15,7 @@ dependencyResolutionManagement { repositories { google(); mavenCentral(); maven(
 Puis la dépendance :
 
 ```kotlin
-implementation("com.github.Paywallex:paywallex-android:1.0.0")
+implementation("com.github.Paywallex:paywallex-android:1.0.1")
 ```
 
 Déclarez votre schéma sur l'activité de retour dans le manifeste (`<data android:scheme="monapp" />` dans un `intent-filter` VIEW, DEFAULT, BROWSABLE).

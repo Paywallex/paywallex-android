@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.Paywallex"
-version = "1.0.0"
+version = "1.0.1"
 
 android {
     namespace = "app.paywallex.sdk"
@@ -21,13 +21,13 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 }
 
-// Publication JitPack : implementation("com.github.Paywallex:paywallex-android:1.0.0"). Signé : Superagent.
+// Publication JitPack : implementation("com.github.Paywallex:paywallex-android:1.0.1"). Signé : Superagent.
 afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.github.Paywallex"; artifactId = "paywallex-android"; version = "1.0.0"
+                groupId = "com.github.Paywallex"; artifactId = "paywallex-android"; version = "1.0.1"
             }
         }
     }

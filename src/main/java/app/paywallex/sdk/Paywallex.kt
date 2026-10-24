@@ -1,4 +1,4 @@
-// Paywallex pour Android (v1.0.0, DV4) : paiement, abonnement, retour dans l'app, confirmation serveur. Ouvre la page de paiement dans un onglet personnalisé du navigateur (Custom Tabs),
+// Paywallex pour Android (v1.0.1, DV4) : paiement, abonnement, retour dans l'app, confirmation serveur. Ouvre la page de paiement dans un onglet personnalisé du navigateur (Custom Tabs),
 // qui partage la connexion Paywallex de Chrome : la personne paie avec son compte en un geste (App Switch),
 // puis revient dans votre app par votre schéma (monapp://…), déclaré dans le manifeste de l'activité de retour.
 // Le résultat est toujours confirmé auprès de Paywallex (/connect/status) : l'adresse de retour seule ne prouve rien.
@@ -104,7 +104,7 @@ class Paywallex(private val appKey: String, baseUrl: String, private val returnU
         val c = URL(url).openConnection() as HttpURLConnection
         try {
             c.requestMethod = method; c.connectTimeout = 15000; c.readTimeout = 15000
-            c.setRequestProperty("Paywallex-Sdk", "android/1.0.0")
+            c.setRequestProperty("Paywallex-Sdk", "android/1.0.1")
             if (body != null) {
                 c.doOutput = true; c.setRequestProperty("Content-Type", "application/json")
                 c.outputStream.use { it.write(body.toByteArray()) }
