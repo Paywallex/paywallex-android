@@ -25,7 +25,7 @@ Déclarez votre schéma sur l'activité de retour dans le manifeste (`<data andr
 Le paiement se fait en deux temps : ouvrir la page, puis lire le retour.
 
 ```kotlin
-val paywallex = Paywallex("pxa_test_…", "https://api.paywallx.xyz", "monapp://paiement")
+val paywallex = Paywallex("pxa_test_…", "https://api.paywallex.app", "monapp://paiement")
 
 // 1. Ouvrir la page Paywallex
 paywallex.startPayment(activity, amount = "5000", reference = "CMD-1042", title = "Commande 1042")
